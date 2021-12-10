@@ -1,0 +1,19 @@
+{
+  "name": "nullstack-to-njs",
+  "version": "0.8.0",
+  "description": "Parser from something to the Nullstack njs file",
+  "main": "index.js",
+  "author": "GuiDevloper",
+  "license": "MIT",
+  "keywords": [
+    "nullstack",
+    "cli",
+    "parser"
+  ],
+  "bin": {
+    "nullstack-to-njs": "./index.js"
+  },
+  "dependencies": {
+    "nullstack": "*"
+  }
+}
