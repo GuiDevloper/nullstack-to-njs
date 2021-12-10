@@ -69,6 +69,9 @@ function runCLI() {
   pawn.stderr.on('data', err => {
     process.stderr.write(err, 'utf8');
   });
+  process.stdin.on('data', data => {
+    pawn.stdin.write(data);
+  });
 }
 
 function startWatching() {
