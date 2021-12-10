@@ -1,6 +1,6 @@
 {
   "name": "nullstack-to-njs",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Parser from something to the Nullstack njs file",
   "main": "index.js",
   "author": "GuiDevloper",
