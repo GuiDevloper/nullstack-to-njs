@@ -54,7 +54,7 @@ function searchSyntax(text, type) {
 
 function parseFile(text) {
   text = removeComments(text);
-  text = text.replace(': Context) {', ') {');
+  text = text.replace(/: Context.*\) \{/g, ') {');
   // remove props typing from constructor
   text = text.replace(/constructor\(.*\) \{/, match => {
     const matches = match.split(/\:.*/);
