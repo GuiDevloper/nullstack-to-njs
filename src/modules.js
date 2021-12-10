@@ -12,12 +12,14 @@ function getFullPath(folder, filename) {
 function compileFile(filename) {
   const fullPath = getFullPath('src', filename);
   const fileText = fs.readFileSync(fullPath, 'utf8');
-  const newFullPath = getFullPath('out', filename.replace('.tsx', '.njs'));
+  const newFullPath = getFullPath('out', filename.replace(/\.tsx$/, '.njs'));
   const outFolder = path.join(process.cwd(), './out', filename, '..');
   if (!fs.existsSync(outFolder)) {
     fs.mkdirSync(outFolder, { recursive: true });
   }
-  const parsed = fileText ? parseTSX(fileText) : '';
+  const parsed = !fileText.trim() ? '' : (
+    filename.endsWith('.tsx') ? parseTSX(fileText) : fileText
+  );
   fs.writeFileSync(newFullPath, parsed);
   // console.log(`${new Date().getMinutes()}:${new Date().getSeconds()}:${new Date().getMilliseconds()} ${filename} file Changed`);
 }
