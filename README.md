@@ -1,7 +1,7 @@
 # nullstack-to-njs
 Parser from something to the Nullstack **njs** file
 
-[!nullstack-tsx-example video](../assets/nullstack-tsx-example.mp4)
+[!nullstack-tsx-example video](https://user-images.githubusercontent.com/31557312/145647166-0f0e019b-ddc8-4ab9-9234-6b6d6daa885e.mp4)
 
 ## Use
 
@@ -27,9 +27,9 @@ Writing code in TSX brings the known TS features in editor, and some are very fi
 
 ### Typing of Component Props
 
-[!Typing of Component Props Example](./assets/component-props-typing.png)
+![Typing of Component Props Example](https://github.com/GuiDevloper/nullstack-to-njs/blob/master/assets/component-props-typing.png?raw=true)
 
-When declared in component `constructor`, editors understands which props it requires and their types.
+When declared in component `constructor`, editors understands which props it requires and their respective types.
 
 ```tsx
 type Props = Context & {
@@ -60,11 +60,11 @@ class Home extends Nullstack {
 
 ### Docs inside Context typings
 
-[!Docs inside Context typings Example](./assets/context-typing-docs.png)
+![Docs inside Context typings Example](https://github.com/GuiDevloper/nullstack-to-njs/blob/master/assets/context-typing-docs.png?raw=true)
 
-The Nullstack Team have been working in concepts like joining the docs and code, typing files came as the target to invest to best achieve this.
+The Nullstack Team have been working in concepts like joining the docs and code, TS typing files came as the target to invest to best achieve this.
 
-Currently in improvement, our typing files are ready for some tests in the [nullstack-types repo](https://github.com/GuiDevloper/nullstack-types) and as npm package.
+Currently in improvement, our typing files are ready for some tests in the [nullstack-types repo](https://github.com/GuiDevloper/nullstack-types) and as [npm package](https://npmjs.com/package/nullstack-types).
 
 Typing files finally found it's perfect use inside TSX files, to use them, currently you should install as follows:
 
